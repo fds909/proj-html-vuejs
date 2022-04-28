@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header :menu="headerMenu"/>
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: 'App',
   components: {
     Header
+  },
+  data() {
+    return {
+      headerMenu: ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT'],
+    }
   }
 }
 </script>

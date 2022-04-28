@@ -4,7 +4,7 @@
         <img class="logo" src="../assets/img/avada-bakery-logo.png" alt="Bakery Avada Logo">
         <nav>
             <ul>
-                <li v-for="(element, index) in headerMenu" :key="index">
+                <li class="menu-item" v-for="(element, index) in menu" :key="index">
                     <a href="#">{{ element }}</a>
                 </li>
                 <li>
@@ -31,11 +31,7 @@
 <script>
 export default {
   name: 'HeaderComp',
-  data() {
-      return {
-          headerMenu: ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT']
-      }
-  }
+  props: ['menu']
 }
 </script>
 
@@ -71,6 +67,15 @@ export default {
     nav li {
         display: inline-block;
         margin: 0 10px;
+    }
+
+    nav .menu-item {
+        display: inline;
+        margin: 0 10px;
+        margin-bottom: 20px;
+        &:hover {
+            border-bottom: 2px solid $daisy-bush;
+        }
     }
 
     nav a {
