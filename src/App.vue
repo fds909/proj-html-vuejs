@@ -1,20 +1,46 @@
 <template>
   <div id="app">
-    <Header :menu="headerMenu"/>
+    <HeaderComp :menu="headerMenu"/>
+
+    <MainComp :products="products"/>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import HeaderComp from './components/HeaderComp.vue'
+import MainComp from './components/MainComp.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    HeaderComp,
+    MainComp
   },
   data() {
     return {
       headerMenu: ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT'],
+      products: [
+        {
+          'name': 'Choco Chip Cookies',
+          'image': 'choco-chip-cookies.jpg',
+          'priceRange': '$19.00 - $39.00'
+        },
+        {
+          'name': 'Strawberry Jam Cookies',
+          'image': 'strawberry-jam-cookies.jpg',
+          'priceRange': '$24.00 - $62.00'
+        },
+        {
+          'name': 'Strawberry Donut',
+          'image': 'strawberry-donut.jpg',
+          'priceRange': '$24.00 - $42.00'
+        },
+        {
+          'name': 'Perfect Macarons',
+          'image': 'perfect-macarons.jpg',
+          'priceRange': '$18.00 - $52.00'
+        }
+      ]
     }
   }
 }
@@ -31,7 +57,7 @@ export default {
   }
 
   body {
-    font-family: 'Libre Bodoni', serif;
+    font-family: 'Open Sans', sans-serif;
   }
 
   // Commons
@@ -50,7 +76,12 @@ export default {
   }
 
   .btn-white {
-    background-color: white;
+    background-color: $white;
     color: $daisy-bush;
+  }
+
+  .btn-purple {
+    background-color: $daisy-bush;
+    color: $white;
   }
 </style>
