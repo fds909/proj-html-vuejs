@@ -84,4 +84,14 @@ export default {
     background-color: $daisy-bush;
     color: $white;
   }
+
+  .bnt-white:hover {
+    background-color: $daisy-bush;
+    color: $white;
+  }
+
+  .btn-purple:hover {
+    background-color: $white;
+    color: $daisy-bush;
+  }
 </style>
