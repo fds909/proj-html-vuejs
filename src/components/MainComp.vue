@@ -4,6 +4,8 @@
       <ProductsComp :products="products"/>
 
       <NumbersComp/>
+
+      <LocationsComp/>
     </div>
   </main>
 </template>
@@ -11,13 +13,15 @@
 <script>
 import ProductsComp from './ProductsComp.vue'
 import NumbersComp from './NumbersComp.vue'
+import LocationsComp from './LocationsComp.vue'
 
 export default {
   name: 'MainComp',
   props: ['products'],
   components: {
     ProductsComp,
-    NumbersComp
+    NumbersComp,
+    LocationsComp
   }
 }
 </script>
