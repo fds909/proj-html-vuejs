@@ -26,12 +26,24 @@
       </div>
       <h2>Baking Special Moments</h2>
       <div class="wedding-images">
-        <div class="img-container">
+        <div class="img-container" id="corporate">
           <img src="../assets/img/corporate-bg.jpg" alt="Corporate">
+          <!-- Hover -->
+          <div class="corporate">
+            <div class="upper-text">International bakery</div>
+            <h2>Corporate Events</h2>
+            <a class="btn btn-purple" href="#">Explore more</a>
+          </div>
         </div>
 
-        <div class="img-container">
+        <div class="img-container" id="weddings">
           <img src="../assets/img/wedding-bg.jpg" alt="Wedding">
+          <!-- Hover -->
+          <div class="corporate">
+            <div class="upper-text">Private dining hall</div>
+            <h2>Weddings & Parties</h2>
+            <a class="btn btn-purple" href="#">Explore more</a>
+          </div>
         </div>
       </div>
     </div>
@@ -48,13 +60,6 @@
 
       <div class="slider-small-content">
         <div class="card-container">
-          <!-- <ProductCard
-              v-for="(prod, index) in products"
-              :key="index"
-              :name="prod.name"
-              :image="prod.image"
-              :price="prod.price"
-          /> -->
           <div class="arrow-left"><i class="fa-solid fa-angle-left"></i></div>
           <div class="arrow-right"><i class="fa-solid fa-angle-right"></i></div>
           <div class="product-card">
@@ -102,7 +107,7 @@ export default {
     padding: 100px 0;
   }
 
-  // Slider Lanrge
+  // Slider Large
   .slider-large {
     display: flex;
   }
@@ -178,6 +183,67 @@ export default {
   .wedding .img-container {
     width: 50%;
     padding: 0 20px;
+  }
+
+  #corporate {
+    position: relative;
+  }
+
+  #weddings {
+    position: relative;
+  }
+
+  .corporate {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../assets/img/corporate-hover-bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #weddings .corporate {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../assets/img/wedding-hover-bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #corporate:hover .corporate {
+    display: flex;
+  }
+
+  #weddings:hover .corporate {
+    display: flex;
+  }
+
+  .wedding .upper-text {
+    color: $white;
+  }
+
+  .wedding h2 {
+    color: $white;
+  }
+
+  .wedding .btn {
+    width: 200px;
+    text-align: center;
   }
 
   //Slider Small
