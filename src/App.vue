@@ -98,7 +98,7 @@ export default {
     color: $white;
   }
 
-  .bnt-white:hover {
+  .btn-white:hover {
     background-color: $daisy-bush;
     color: $white;
   }
