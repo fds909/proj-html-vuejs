@@ -79,6 +79,7 @@ export default {
     }
 
     nav a {
+        color: $daisy-bush !important;
         text-decoration: none;
         font-size: 14px;
     }

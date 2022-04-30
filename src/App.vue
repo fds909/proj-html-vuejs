@@ -3,22 +3,29 @@
     <HeaderComp :menu="headerMenu"/>
 
     <MainComp :products="products"/>
+
+    <FooterComp :menu="footerMenu"/>
   </div>
 </template>
 
 <script>
 import HeaderComp from './components/HeaderComp.vue'
 import MainComp from './components/MainComp.vue'
+import FooterComp from './components/FooterComp.vue'
+
+import "bootstrap";
 
 export default {
   name: 'App',
   components: {
     HeaderComp,
-    MainComp
+    MainComp,
+    FooterComp
   },
   data() {
     return {
       headerMenu: ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT'],
+      footerMenu: ['Shop', 'About', 'Gallery', 'Locations', 'Journal', 'Contact', 'Orders'],
       products: [
         {
           'name': 'Choco Chip Cookies',
@@ -48,6 +55,7 @@ export default {
 
 <style lang="scss">
   @import 'style/palette.scss';
+  @import "bootstrap/dist/css/bootstrap.min.css";
 
   // Reset
   * {
@@ -66,6 +74,11 @@ export default {
     margin: 0 auto;
   }
 
+  img {
+    max-width: 100%;
+  }
+
+  // Buttons
   .btn {
     text-decoration: none;
     padding: 10px 30px;

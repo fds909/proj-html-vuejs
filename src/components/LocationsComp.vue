@@ -79,10 +79,6 @@ export default {
         margin: 30px 0;
     }
 
-    img {
-        max-width: 100%;
-    }
-
     .locations {
         display: flex;
     }

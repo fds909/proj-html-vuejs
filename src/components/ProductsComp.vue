@@ -102,10 +102,6 @@ export default {
     padding: 100px 0;
   }
 
-  img {
-    max-width: 100%;
-  }
-
   // Slider Lanrge
   .slider-large {
     display: flex;

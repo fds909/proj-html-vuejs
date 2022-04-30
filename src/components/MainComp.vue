@@ -6,7 +6,10 @@
       <NumbersComp/>
 
       <LocationsComp/>
+
+      <SocialComp/>
     </div>
+      <CallToActionComp/>
   </main>
 </template>
 
@@ -14,6 +17,8 @@
 import ProductsComp from './ProductsComp.vue'
 import NumbersComp from './NumbersComp.vue'
 import LocationsComp from './LocationsComp.vue'
+import SocialComp from './SocialComp.vue'
+import CallToActionComp from './CallToActionComp.vue'
 
 export default {
   name: 'MainComp',
@@ -21,7 +26,9 @@ export default {
   components: {
     ProductsComp,
     NumbersComp,
-    LocationsComp
+    LocationsComp,
+    SocialComp,
+    CallToActionComp
   }
 }
 </script>
