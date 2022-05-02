@@ -1,5 +1,7 @@
 <template>
   <header>
+    <FloatingButtons/>
+
     <div class="header-top">
         <img class="logo" src="../assets/img/avada-bakery-logo.png" alt="Bakery Avada Logo">
         <nav>
@@ -29,9 +31,14 @@
 </template>
 
 <script>
+import FloatingButtons from './FloatingButtons.vue';
+
 export default {
   name: 'HeaderComp',
-  props: ['menu']
+  props: ['menu'],
+  components: {
+      FloatingButtons
+  }
 }
 </script>
 
