@@ -24,8 +24,9 @@ export default {
 @import '../style/palette.scss';
 
 .buttons-container {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
     position: fixed;
     top: 150px;
     right: 10px;
