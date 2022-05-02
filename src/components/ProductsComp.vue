@@ -14,8 +14,22 @@
       <div class="slider-large-content">
         <div class="arrow-left"><i class="fa-solid fa-angle-left"></i></div>
         <div class="arrow-right"><i class="fa-solid fa-angle-right"></i></div>
-        <img src="../assets/img/choco-chip-cookies-400x510.jpg" alt="Choco Chip Coockies">
-        <img src="../assets/img/strawberry-jam-cookies-400x510.jpg" alt="Strawberry Jam Cookies">
+        <div class="img-container">
+          <img src="../assets/img/choco-chip-cookies-400x510.jpg" alt="Choco Chip Coockies">
+          <div class="slider-large-info">
+            <h3>Choco Chip Cookies</h3>
+            <div class="category">Cookies, Pastries</div>
+            <div class="price">$19.00  $39.00</div>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="../assets/img/strawberry-jam-cookies-400x510.jpg" alt="Strawberry Jam Cookies">
+          <div class="slider-large-info">
+            <h3>Strawberry Jam Cookies</h3>
+            <div class="category">Cookies, Pastries</div>
+            <div class="price">$24.00 - $62.00</div>
+          </div>
+        </div>
       </div>
   
     </div>
@@ -63,22 +77,34 @@
           <div class="arrow-left"><i class="fa-solid fa-angle-left"></i></div>
           <div class="arrow-right"><i class="fa-solid fa-angle-right"></i></div>
           <div class="product-card">
-            <img src="../assets/img/choco-chip-cookies.jpg" alt="Choco Chip Cookies">
+            <div class="img-container">
+              <img src="../assets/img/choco-chip-cookies.jpg" alt="Choco Chip Cookies">
+              <div class="slider-small-info">SELECT OPTIONS / QUICK VIEW</div>
+            </div>
             <h3>Choco Chip Cookies</h3>
             <div class="price">$19.00 - $39.00</div>
           </div>
           <div class="product-card">
-            <img src="../assets/img/strawberry-jam-cookies.jpg" alt="Choco Chip Cookies">
+            <div class="img-container">
+              <img src="../assets/img/strawberry-jam-cookies.jpg" alt="Strawberry Jam Cookies">
+              <div class="slider-small-info">SELECT OPTIONS / QUICK VIEW</div>
+            </div>
             <h3>Strawberry Jam Cookies</h3>
             <div class="price">$24.00 - $62.00</div>
           </div>
           <div class="product-card">
-            <img src="../assets/img/strawberry-donut.jpg" alt="Choco Chip Cookies">
+            <div class="img-container">
+              <img src="../assets/img/strawberry-donut.jpg" alt="Strawberry Donut">
+              <div class="slider-small-info">SELECT OPTIONS / QUICK VIEW</div>
+            </div>
             <h3>Strawberry Donut</h3>
             <div class="price">$24.00 - $42.00</div>
           </div>
           <div class="product-card">
-            <img src="../assets/img/perfect-macarons.jpg" alt="Choco Chip Cookies">
+            <div class="img-container">
+              <img src="../assets/img/perfect-macarons.jpg" alt="Perfect Macarons">
+              <div class="slider-small-info">SELECT OPTIONS / QUICK VIEW</div>
+            </div>
             <h3>Perfect Macarons</h3>
             <div class="price">$18.00 - $52.00</div>
           </div>
@@ -89,14 +115,10 @@
 </template>
 
 <script>
-// import ProductCard from './partials/ProductCard.vue'
 
 export default {
   name: 'ProductsComp',
-  props: ['products'],
-  // components: {
-  //   ProductCard
-  // }
+  props: ['products']
 }
 </script>
 
@@ -138,8 +160,41 @@ export default {
     position: relative;
   }
 
-  .slider-large-content img {
+  .slider-large-content .img-container {
     width: 50%;
+    position: relative;
+  }
+
+  .slider-large-info {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    background-color: rgba($color: black, $alpha: 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .slider-large-content>.img-container:hover .slider-large-info {
+    display: flex;
+  }
+
+  .slider-large-info h3 {
+    font-family: 'Libre Bodoni', serif;
+    font-weight: bold;
+  }
+
+  .slider-large-info .category {
+    font-size: 11px;
+    margin: 15px 0;
+  }
+
+  .slider-large-info .price {
+    font-size: 24px;
   }
 
   .arrow-left, .arrow-right {
@@ -152,6 +207,7 @@ export default {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
   }
 
   .arrow-left {
@@ -287,6 +343,28 @@ export default {
     width: calc(100% / 4);
   }
 
+  .product-card .img-container {
+    position: relative;
+  }
+
+  .slider-small-info {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    font-size: 12px;
+    background-color: rgba($color: black, $alpha: 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .product-card>.img-container:hover .slider-small-info {
+    display: flex;
+  }
+
   .product-card h3 {
     font-family: 'Libre Bodoni', serif;
     font-size: 17px;
@@ -301,7 +379,4 @@ export default {
     font-size: 15px;
     text-align: center;
   }
-
-
-
 </style>
